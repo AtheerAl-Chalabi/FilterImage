@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FilterImage</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+	<title>
+    Upload Image
+  </title>
+</head>
+<body>
+	<script src=" https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js";></script>
+	<canvas id="can"></canvas>
+	<div id="d">
+		<label for="inpt" >Select Image &nbsp;&nbsp;</label>
+		<input type="file" id="inpt" onchange="updatePic()" multiple="false" accept="image/jpeg" value="upload"/>
+		<div id="color1">
+    <input type="range" id="grayC" value="0"  onchange="callColors()" min="0" max="170" class = "grayColor"/>
+		<input type="range" id="redC" value="0"  onchange="callColors()" min="0" max="255" class = "redColor"/>
+		<input type="range" id="greenC" value="0"  onchange="callColors()" min="0" max="255" class = "greenColor"/>
+		<input type="range" id="blueC" value="0"  onchange="callColors()" min="0" max="255" class = "blueColor"/>
+    </div>
+    <div di="color2">
+		<input type="range" id="blackC" value="0"  onchange="callColors()" min="0" max="255" class = "blackColor"/>
+		<input type="range" id="whiteC" value="0"  onchange="callColors()" min="0" max="255" class = "whiteColor"/>
+    	<canvas id="can2" onclick="rainBow()"></canvas>
+    </div>
+    <div id = "reseat">
+		<input type="button" id="clr"  class = "clar" value="Reset Image" onclick="resetCall()"/>
+    </div>
+	</div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
